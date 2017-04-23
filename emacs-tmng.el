@@ -18,8 +18,16 @@
   
 
   (defconst tmng-mode-font-lock-keywords (list
-;    '("\\ {'\\w*'\\}" . font-lock-variable-name-face)
-    '("{}" . font-lock-variable-name-face))
+    '("{.*}" . font-lock-variable-name-face)
+    '("\\[.*\\]" . font-lock-variable-name-face)
+    '("(.*)" . font-lock-variable-name-face)
+    '("■.*" . font-lock-variable-name-face)
+    '("□.*" . font-lock-variable-name-face)
+    '("●.*" . font-lock-variable-name-face)
+    '("◎.*" . font-lock-variable-name-face)
+    '("○.*" . font-lock-variable-name-face))
+
+
     "Minimal highlighting expressions for Tmng mode")
 
 (provide 'emacs-tmng)
